@@ -5,23 +5,166 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <link href="Style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main Page</title>
+    <title>Main</title>
 </head>
 
 <body>
-    <ul>
+    <style>
+        body,
+        h1,
+        h2 {
+            font-family: "Raleway", sans-serif
+        }
+        
+        body,
+        html {
+            height: 100%
+        }
+        
+        p {
+            line-height: 2
+        }
+        
+        .bgimg,
+        .bgimg2 {
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .bgimg2 {
+            background-image: url("./bbeee115522332771a871c4efa6585fb.jpg")
+        }
+    </style>
+
+
+    <!-- Header / Home-->
+    <header class="w3-display-container w3-wide w3-grayscale-min" id="view1">
+
+        <h1 class="w3-jumbo">50 Measurements types and values</h1>
+
+        <table id="view1tbl" class="Tabuler"></table>
+
+
+    </header>
+
+    <!-- Navbar (sticky bottom) -->
+    <div class="w3-bottom w3-hide-small">
+        <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+            <a href="#view1" style="width:25%" class="w3-bar-item w3-button">Measurements Types</a>
+            <a href="#view2" style="width:25%" class="w3-bar-item w3-button">Temperature</a>
+            <a href="#view3" style="width:25%" class="w3-bar-item w3-button">Wind Direction</a>
+            <a href="#view4" style="width:25%" class="w3-bar-item w3-button w3-hover-black">Weathers</a>
+        </div>
+    </div>
+
+    <!-- About / Jane And John -->
+    <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="view2">
+        <h1 class="w3-center">Temperature and Values</h1>
+        <div class="w3-content w3-center">
+
+            <select id="timeinterval">
+      <option value="timeinterval_1">Now</option>
+      <option value="timeinterval_2">24 hours</option>
+      <option value="timeinterval_3">48 hours</option>
+      <option value="timeinterval_4">72 hours</option>
+      <option value="timeinterval_5">1 week</option>
+      <option value="timeinterval_6">1 month</option>
+    <select>
+    
+    
+        </div>
+            <div id="content_1">
+        <h1 id="heading"></h1>
+         <table id="View2Tbl" class="Tabuler"></table>
+         <div id="view2_barchart" style="height: 500%;"></div>   
+    </div>
+
+    </div>
+
+
+    <!-- Wedding information -->
+    <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="view3">
+        <div class="w3-content">
+            <h1 class="w3-text-grey"><b>Wind Direction and Values</b></h1>
+            <select id="view3_timeinterval">
+              <option value="view3_timeinterval_1">Now</option>
+              <option value="view3_timeinterval_2">24 hours</option>
+              <option value="view3_timeinterval_3">48 hours</option>
+              <option value="view3_timeinterval_4">72 hours</option>
+              <option value="view3_timeinterval_5">1 week</option>
+              <option value="view3_timeinterval_6">1 month</option>
+            <select>
+            
+            
+        </div>
+        
+        <div id="view3_content_1">
+            
+          <h1 id="heading"></h1>
+           <table id="View3Tbl" class="Tabuler"></table>
+           <div id="view3_barchart" style="height: 500%;"></div>   
+      </div>
+    </div>
+
+    <!-- RSVP section -->
+    <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="view4">
+      <h1 class="w3-wide">Four Different Weathers Type and Values</h1>
+      <p>Please Select Weather and Time Intervals</p>
+      
+      <div class="w3-row">
+        <select id="view4_Measurements">
+          <option value="view4_Measurements_1">rain</option>
+          <option value="view4_Measurements_2">wind_speed</option>
+          <option value="view4_Measurements_3">light</option>
+          <option value="view4_Measurements_3">temperature</option>
+<select>
+
+<select id="view4_timeinterval">
+          <option value="view4_timeinterval_1">Now</option>
+          <option value="view4_timeinterval_2">24 hours</option>
+          <option value="view4_timeinterval_3">48 hours</option>
+          <option value="view4_timeinterval_4">72 hours</option>
+          <option value="view4_timeinterval_5">1 week</option>
+          <option value="view4_timeinterval_6">1 month</option>
+<select>
+
+        <div id="view4_content_1">
+        
+            <h1 id="view4_heading"></h1>
+             <table id="View4Tbl" class="Tabuler"></table>
+             <div id="view4_linechart" style="height: 500%;"></div>   
+        </div>
+
+</div>
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+        <p>Weather Application</p>
+    </footer>
+
+
+    <!-- <ul>
         <li><a class="active" href="./index.html">View 1</a></li>
         <li><a href="./view2.html">View 2</a></li>
+        <li><a href="./view3.html">View 3</a></li>
+        <li><a href="./view4.html">View 4</a></li>
     </ul>
     <h1>The Latest 50 Measurements Type</h1>
     <!-- table for showing data -->
-    <table id="employees" class="Tabuler"></table>
-
     <script src="Script.js"></script>
-
+    <script src="Script2.js"></script>
+    
+    <script src="Script3.js"></script>
+    
+    <script src="script4.js"></script>
+    
 </body>
 
 </html>
