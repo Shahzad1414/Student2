@@ -45,9 +45,9 @@
 
     <!-- Header / Home-->
     <header class="w3-display-container w3-wide w3-grayscale-min" id="view1">
-
         <h1 class="w3-jumbo">50 Measurements types and values</h1>
 
+        <input type="text" id="searchFiltr" placeholder="Search" style="margin-top: 10px; margin-left: 10px; margin-bottom: 10px;" />
         <table id="view1tbl" class="Tabuler"></table>
 
 
@@ -73,11 +73,21 @@
     <script src="Script.js"></script>
     <script src="tsorter.min.js"></script>
     <script>
-    function init() {
-    var sorter = tsorter.create('view1tbl');
-}
-    
-window.onload = init;
+        function init() {
+            var sorter = tsorter.create('view1tbl');
+        }
+
+        window.onload = init;
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#searchFiltr").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#view1tbl tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
     </script>
 </body>
 
