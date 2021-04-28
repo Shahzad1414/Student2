@@ -44,14 +44,6 @@
 
 
     <!-- Header / Home-->
-    <header class="w3-display-container w3-wide w3-grayscale-min" id="view1">
-
-        <h1 class="w3-jumbo">50 Measurements types and values</h1>
-
-        <table id="view1tbl" class="Tabuler"></table>
-
-
-    </header>
 
     <!-- Navbar (sticky bottom) -->
     <div class="w3-bottom w3-hide-small">
@@ -63,6 +55,28 @@
         </div>
     </div>
 
+    <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="view3">
+        <div class="w3-content">
+            <h1 class="w3-text-grey"><b>Wind Direction and Values</b></h1>
+            <select id="view3_timeinterval">
+              <option value="view3_timeinterval_1">Now</option>
+              <option value="view3_timeinterval_2">24 hours</option>
+              <option value="view3_timeinterval_3">48 hours</option>
+              <option value="view3_timeinterval_4">72 hours</option>
+              <option value="view3_timeinterval_5">1 week</option>
+              <option value="view3_timeinterval_6">1 month</option>
+            <select>
+            
+            
+        </div>
+        
+        <div id="view3_content_1">
+            
+          <h1 id="heading"></h1>
+           <table id="View3Tbl" class="Tabuler"></table>
+           <div id="view3_barchart" style="height: 500%;"></div>   
+      </div>
+    </div>
 
 
     <!-- Footer -->
@@ -70,8 +84,10 @@
         <p>Weather Application</p>
     </footer>
 
-    <script src="Script.js"></script>
-
+    
+    <script src="Script3.js"></script>
+    
+    
 </body>
 
 </html>

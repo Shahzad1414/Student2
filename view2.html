@@ -43,17 +43,6 @@
     </style>
 
 
-    <!-- Header / Home-->
-    <header class="w3-display-container w3-wide w3-grayscale-min" id="view1">
-
-        <h1 class="w3-jumbo">50 Measurements types and values</h1>
-
-        <table id="view1tbl" class="Tabuler"></table>
-
-
-    </header>
-
-    <!-- Navbar (sticky bottom) -->
     <div class="w3-bottom w3-hide-small">
         <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
             <a href="./index.html" style="width:25%" class="w3-bar-item w3-button">Measurements Types</a>
@@ -63,6 +52,32 @@
         </div>
     </div>
 
+    <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="view2">
+        <h1 class="w3-center">Temperature and Values</h1>
+        <div class="w3-content w3-center">
+
+            <select id="timeinterval">
+      <option value="timeinterval_1">Now</option>
+      <option value="timeinterval_2">24 hours</option>
+      <option value="timeinterval_3">48 hours</option>
+      <option value="timeinterval_4">72 hours</option>
+      <option value="timeinterval_5">1 week</option>
+      <option value="timeinterval_6">1 month</option>
+    <select>
+    
+    
+        </div>
+            <div id="content_1">
+        <h1 id="heading"></h1>
+         <table id="View2Tbl" class="Tabuler"></table>
+         <div id="view2_barchart" style="height: 500%;"></div>   
+    </div>
+
+    </div>
+
+
+  
+  
 
 
     <!-- Footer -->
@@ -70,8 +85,8 @@
         <p>Weather Application</p>
     </footer>
 
-    <script src="Script.js"></script>
-
+    <script src="Script2.js"></script>
+    
 </body>
 
 </html>
